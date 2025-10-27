@@ -8,6 +8,10 @@
 	--shadow-sm: 0 4px 6px rgba(13, 8, 23, 0.1);
 	--shadow-md: 0 6px 30px rgba(13, 8, 23, 0.6);
 	--shadow-lg: 0 8px 30px rgba(109, 40, 217, 0.18);
+	--success: #10b981;
+	--warning: #f59e0b;
+	--error: #ef4444;
+	--info: #3b82f6;
 }
 
 * {
@@ -780,6 +784,161 @@ h1 {
 	outline: none;
 	border-color: var(--accent);
 	box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+/* Add new icon styles */
+.icon {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: middle;
+	transition: all 0.3s ease;
+}
+
+.warning-icon {
+	stroke: var(--warning);
+	opacity: 0.8;
+}
+
+.success-icon {
+	stroke: var(--success);
+	opacity: 0.8;
+}
+
+.info-icon {
+	stroke: var(--info);
+	opacity: 0.8;
+}
+
+.error-icon {
+	stroke: var(--error);
+	opacity: 0.8;
+}
+
+/* Add hint styles */
+.language-hint {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-top: 8px;
+	padding: 8px 12px;
+	background: rgba(59, 130, 246, 0.1);
+	border-radius: 8px;
+	font-size: 13px;
+	color: var(--muted);
+	animation: fadeIn 0.3s ease-out;
+}
+
+/* Enhanced status indicators */
+.lang-status {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 13px;
+	padding: 4px 8px;
+	border-radius: 4px;
+	transition: all 0.3s ease;
+}
+
+.lang-status.updated {
+	background: rgba(16, 185, 129, 0.1);
+	color: var(--success);
+	animation: statusUpdate 0.3s ease;
+}
+
+.lang-status .icon {
+	opacity: 0;
+	transform: scale(0);
+	transition: all 0.3s ease;
+}
+
+.lang-status.updated .icon {
+	opacity: 1;
+	transform: scale(1);
+}
+
+/* Add new animations */
+@keyframes shake {
+
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+
+	25% {
+		transform: translateX(-4px);
+	}
+
+	75% {
+		transform: translateX(4px);
+	}
+}
+
+@keyframes bounce {
+
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-4px);
+	}
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* Button enhancements */
+.primary:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+	animation: none;
+}
+
+.primary:not(:disabled):hover {
+	transform: translateY(-2px) scale(1.02);
+	box-shadow: 0 12px 40px rgba(109, 40, 217, 0.25);
+}
+
+/* Enhanced toast styles */
+.toast {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 12px 16px;
+	border-radius: 10px;
+	box-shadow: var(--shadow-lg);
+	z-index: 2000;
+	max-width: 320px;
+	transition: all 0.3s ease;
+}
+
+.toast.info {
+	background: rgba(59, 130, 246, 0.1);
+	border-left: 4px solid var(--info);
+}
+
+.toast.success {
+	background: rgba(16, 185, 129, 0.1);
+	border-left: 4px solid var(--success);
+}
+
+.toast.warning {
+	background: rgba(245, 158, 11, 0.1);
+	border-left: 4px solid var(--warning);
+}
+
+.toast.error {
+	background: rgba(239, 68, 68, 0.1);
+	border-left: 4px solid var(--error);
 }
 
 .device-status,
