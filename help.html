@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Help · Text Recognization</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<main class="container">
+			<section class="card">
+				<h1>Help — How this site works</h1>
+				<p>
+					This demo is a minimal client-side speech-to-text playground built for
+					demonstration and local use.
+				</p>
+
+				<h3>Important notes & limitations</h3>
+				<ul>
+					<li>
+						The site uses your browser's built-in SpeechRecognition (Web Speech
+						API). Not all browsers support it. Chrome (desktop) and some
+						Chromium-based browsers have better support.
+					</li>
+					<li>
+						Transcription quality depends on the browser engine, microphone
+						quality, and selected language.
+					</li>
+					<li>
+						Uploading audio files does <em>not</em> automatically produce
+						perfect transcription. The "Transcribe while playing" option will
+						play your uploaded audio and use the microphone to capture it — this
+						relies on your system capturing speaker output via microphone, which
+						is not ideal. For accurate audio-file transcription you would
+						normally use a server-side model (e.g., Whisper) or cloud
+						Speech-to-Text APIs.
+					</li>
+					<li>
+						When recording live (Record), the app requests microphone
+						permission. Allow it. The live transcription appears as you speak.
+						Use headphones or quiet environment for best results.
+					</li>
+					<li>
+						After recording you can download the transcript as .txt or copy to
+						clipboard.
+					</li>
+				</ul>
+
+				<h3>How to use</h3>
+				<ol>
+					<li>Click "Let's start" on the landing page.</li>
+					<li>
+						Choose your language from the grid. The app will use that language
+						for recognition.
+					</li>
+					<li>
+						Either paste text, upload a .txt or audio file, or record using your
+						microphone.
+					</li>
+					<li>
+						If you upload audio, press "Play uploaded" to listen, or "Transcribe
+						while playing" to try to capture it via your microphone (requires
+						mic permission).
+					</li>
+					<li>
+						To record live: press Record → Start recording, speak, then Stop.
+						The transcribed text will appear live.
+					</li>
+				</ol>
+
+				<h3>New Features</h3>
+				<ul>
+					<li>
+						<strong>History:</strong> Your transcriptions are automatically
+						saved and can be accessed through the History button in the menu.
+						The last 10 transcriptions are stored locally in your browser.
+					</li>
+					<li>
+						<strong>Settings:</strong> Customize your experience through the
+						Settings menu:
+						<ul>
+							<li>Theme selection (dark mode, with light mode coming soon)</li>
+							<li>Toggle automatic saving of transcriptions</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Enhanced Navigation:</strong> The new menu provides quick
+						access to History, Settings, and Help, with intuitive icons for
+						better usability.
+					</li>
+				</ul>
+
+				<h3>Privacy</h3>
+				<p>
+					This is a local client-side demo and does not send your audio or text
+					to any server. However, speech recognition engines are implemented by
+					the browser vendor and may send audio to their services depending on
+					implementation. Check your browser's privacy policy if this is a
+					concern.
+				</p>
+
+				<p>Created by Yaroslav Antoniuk "rettargatted".</p>
+				<p><a href="index.html">Back</a></p>
+			</section>
+		</main>
+	</body>
+</html>
