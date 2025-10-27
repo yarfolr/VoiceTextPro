@@ -1223,13 +1223,84 @@ h1 {
 	display: none;
 }
 
-/* Light theme overrides */
+/* Theme System */
+/* Default Dark Theme */
+body {
+	--bg: #0b0214;
+	--panel: #150521;
+	--accent: #8b5cf6;
+	--accent-2: #6d28d9;
+	--muted: #bfb5d9;
+}
+
+/* Light Theme */
 body.light-theme {
 	--bg: #f6f7fb;
 	--panel: #ffffff;
 	--accent: #6d28d9;
 	--accent-2: #8b5cf6;
 	--muted: #374151;
+	--text: #1f2937;
+	--border: rgba(0, 0, 0, 0.1);
+	--shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+	--shadow-md: 0 6px 30px rgba(0, 0, 0, 0.1);
+	--shadow-lg: 0 8px 30px rgba(109, 40, 217, 0.15);
+}
+
+/* Ocean Theme */
+body.ocean-theme {
+	--bg: #0a192f;
+	--panel: #112240;
+	--accent: #64ffda;
+	--accent-2: #00b4d8;
+	--muted: #8892b0;
+	--text: #e6f1ff;
+	--border: rgba(100, 255, 218, 0.1);
+	--shadow-sm: 0 4px 6px rgba(0, 180, 216, 0.1);
+	--shadow-md: 0 6px 30px rgba(0, 180, 216, 0.2);
+	--shadow-lg: 0 8px 30px rgba(100, 255, 218, 0.2);
+}
+
+/* Sunset Theme */
+body.sunset-theme {
+	--bg: #1f1933;
+	--panel: #2d1b46;
+	--accent: #ff7e5f;
+	--accent-2: #feb47b;
+	--muted: #c4b5fd;
+	--text: #fff;
+	--border: rgba(255, 126, 95, 0.1);
+	--shadow-sm: 0 4px 6px rgba(255, 126, 95, 0.1);
+	--shadow-md: 0 6px 30px rgba(255, 126, 95, 0.2);
+	--shadow-lg: 0 8px 30px rgba(254, 180, 123, 0.2);
+}
+
+/* Forest Theme */
+body.forest-theme {
+	--bg: #1a2f1c;
+	--panel: #2d4a2f;
+	--accent: #7fdb7f;
+	--accent-2: #2ecc71;
+	--muted: #a8e6cf;
+	--text: #fff;
+	--border: rgba(127, 219, 127, 0.1);
+	--shadow-sm: 0 4px 6px rgba(46, 204, 113, 0.1);
+	--shadow-md: 0 6px 30px rgba(46, 204, 113, 0.2);
+	--shadow-lg: 0 8px 30px rgba(127, 219, 127, 0.2);
+}
+
+/* Royal Theme */
+body.royal-theme {
+	--bg: #13111C;
+	--panel: #1c1829;
+	--accent: #e879f9;
+	--accent-2: #c026d3;
+	--muted: #e2d9f3;
+	--text: #fff;
+	--border: rgba(232, 121, 249, 0.1);
+	--shadow-sm: 0 4px 6px rgba(232, 121, 249, 0.1);
+	--shadow-md: 0 6px 30px rgba(192, 38, 211, 0.2);
+	--shadow-lg: 0 8px 30px rgba(232, 121, 249, 0.2);
 }
 
 /* Features panel UI */

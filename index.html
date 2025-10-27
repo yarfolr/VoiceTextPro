@@ -106,13 +106,47 @@
 
 				<div class="interface-language-control">
 					<div class="select-row">
-						<label for="interfaceLangSelect" data-i18n="langSelect"
-							>Select Interface Language</label
-						>
+						<label for="interfaceLangSelect" data-i18n="langSelect">
+							<svg
+								class="icon warning-icon"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								id="langWarningIcon"
+							>
+								<path
+									d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+								/>
+							</svg>
+							Select Interface Language
+						</label>
 						<select id="interfaceLangSelect" class="lang-select">
 							<!-- Will be populated by JavaScript -->
 						</select>
-						<span id="interfaceLangStatus" class="lang-status"></span>
+						<span id="interfaceLangStatus" class="lang-status">
+							<svg
+								class="icon success-icon hidden"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+							>
+								<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+							</svg>
+						</span>
+					</div>
+					<div class="language-hint" id="languageHint">
+						<svg
+							class="icon info-icon"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+						>
+							<circle cx="12" cy="12" r="10" />
+							<path d="M12 16v-4m0-4h.01" />
+						</svg>
+						<span data-i18n="selectLanguageHint"
+							>Please select a language to continue</span
+						>
 					</div>
 				</div>
 

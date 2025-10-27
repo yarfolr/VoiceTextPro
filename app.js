@@ -1597,6 +1597,14 @@ function showSettings() {
 
 	// Hook up all settings controls
 	const themeSelect = dialog.querySelector('#themeSelect')
+	themeSelect.innerHTML = `
+        <option value="dark">Dark Theme</option>
+        <option value="light">Light Theme</option>
+        <option value="ocean">Ocean Theme</option>
+        <option value="sunset">Sunset Theme</option>
+        <option value="forest">Forest Theme</option>
+        <option value="royal">Royal Theme</option>
+    `
 	const interfaceLangSelect = dialog.querySelector('#interfaceLangSelect')
 	const recognitionLangSelect = dialog.querySelector('#recognitionLangSelect')
 	const autoSaveToggle = dialog.querySelector('#autoSaveToggle')
@@ -1605,12 +1613,17 @@ function showSettings() {
 	const savedTheme = localStorage.getItem('theme') || 'dark'
 	if (themeSelect) {
 		themeSelect.value = savedTheme
-		if (savedTheme === 'light') document.body.classList.add('light-theme')
+		document.body.className = savedTheme + '-theme'
+
 		themeSelect.addEventListener('change', e => {
-			const v = e.target.value
-			if (v === 'light') document.body.classList.add('light-theme')
-			else document.body.classList.remove('light-theme')
-			localStorage.setItem('theme', v)
+			const theme = e.target.value
+			document.body.className = theme + '-theme'
+			localStorage.setItem('theme', theme)
+
+			showToast(`Theme changed to ${theme}`, {
+				type: 'success',
+				timeout: 3000,
+			})
 		})
 	}
 
@@ -1703,8 +1716,12 @@ function setupAutoSave() {
 
 setupAutoSave()
 
-// Initialize language system
+// Initialize language system and theme
 document.addEventListener('DOMContentLoaded', () => {
+	// Initialize theme
+	const savedTheme = localStorage.getItem('theme') || 'dark'
+	document.body.className = savedTheme + '-theme'
+
 	initializeLanguage()
 	// Set initial recognition language from storage or default to browser language
 	const savedRecognitionLang = localStorage.getItem('recognitionLang')

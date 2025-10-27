@@ -9,98 +9,173 @@
 	<body>
 		<main class="container">
 			<section class="card">
-				<h1>Help — How this site works</h1>
+				<h1>Help — How to Use VoiceText Pro</h1>
 				<p>
-					This demo is a minimal client-side speech-to-text playground built for
-					demonstration and local use.
+					VoiceText Pro is a powerful client-side speech-to-text tool designed
+					for local use, offering multiple themes and languages for an enhanced
+					user experience.
 				</p>
 
-				<h3>Important notes & limitations</h3>
+				<h3>Key Features</h3>
 				<ul>
 					<li>
-						The site uses your browser's built-in SpeechRecognition (Web Speech
-						API). Not all browsers support it. Chrome (desktop) and some
-						Chromium-based browsers have better support.
-					</li>
-					<li>
-						Transcription quality depends on the browser engine, microphone
-						quality, and selected language.
-					</li>
-					<li>
-						Uploading audio files does <em>not</em> automatically produce
-						perfect transcription. The "Transcribe while playing" option will
-						play your uploaded audio and use the microphone to capture it — this
-						relies on your system capturing speaker output via microphone, which
-						is not ideal. For accurate audio-file transcription you would
-						normally use a server-side model (e.g., Whisper) or cloud
-						Speech-to-Text APIs.
-					</li>
-					<li>
-						When recording live (Record), the app requests microphone
-						permission. Allow it. The live transcription appears as you speak.
-						Use headphones or quiet environment for best results.
-					</li>
-					<li>
-						After recording you can download the transcript as .txt or copy to
-						clipboard.
-					</li>
-				</ul>
-
-				<h3>How to use</h3>
-				<ol>
-					<li>Click "Let's start" on the landing page.</li>
-					<li>
-						Choose your language from the grid. The app will use that language
-						for recognition.
-					</li>
-					<li>
-						Either paste text, upload a .txt or audio file, or record using your
-						microphone.
-					</li>
-					<li>
-						If you upload audio, press "Play uploaded" to listen, or "Transcribe
-						while playing" to try to capture it via your microphone (requires
-						mic permission).
-					</li>
-					<li>
-						To record live: press Record → Start recording, speak, then Stop.
-						The transcribed text will appear live.
-					</li>
-				</ol>
-
-				<h3>New Features</h3>
-				<ul>
-					<li>
-						<strong>History:</strong> Your transcriptions are automatically
-						saved and can be accessed through the History button in the menu.
-						The last 10 transcriptions are stored locally in your browser.
-					</li>
-					<li>
-						<strong>Settings:</strong> Customize your experience through the
-						Settings menu:
+						<strong>Multiple Themes:</strong> Choose from six different themes:
 						<ul>
-							<li>Theme selection (dark mode, with light mode coming soon)</li>
-							<li>Toggle automatic saving of transcriptions</li>
+							<li>Dark Theme - Classic dark mode for reduced eye strain</li>
+							<li>Light Theme - Clean, bright interface</li>
+							<li>Ocean Theme - Calming blue tones</li>
+							<li>Sunset Theme - Warm, vibrant colors</li>
+							<li>Forest Theme - Natural, earthy palette</li>
+							<li>Royal Theme - Elegant purple accents</li>
 						</ul>
 					</li>
 					<li>
-						<strong>Enhanced Navigation:</strong> The new menu provides quick
-						access to History, Settings, and Help, with intuitive icons for
-						better usability.
+						<strong>Multi-Language Support:</strong>
+						<ul>
+							<li>Interface languages for better accessibility</li>
+							<li>Multiple recognition languages for accurate transcription</li>
+							<li>Real-time language switching</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Enhanced Visual Feedback:</strong>
+						<ul>
+							<li>Live audio visualization</li>
+							<li>Status indicators for recording and processing</li>
+							<li>Toast notifications for important events</li>
+						</ul>
 					</li>
 				</ul>
 
-				<h3>Privacy</h3>
+				<h3>Important Notes & Limitations</h3>
+				<ul>
+					<li>
+						Browser Compatibility: Uses the Web Speech API, best supported in
+						Chrome (desktop) and Chromium-based browsers.
+					</li>
+					<li>
+						Quality Factors: Transcription accuracy depends on:
+						<ul>
+							<li>Browser's speech recognition engine</li>
+							<li>Microphone quality</li>
+							<li>Selected language</li>
+							<li>Environmental noise</li>
+						</ul>
+					</li>
+					<li>
+						Audio File Handling: The "Transcribe while playing" feature captures
+						audio through your microphone - best results require good speaker
+						output and minimal background noise.
+					</li>
+				</ul>
+
+				<h3>How to Use</h3>
+				<ol>
+					<li>
+						Initial Setup:
+						<ul>
+							<li>Click "Let's start" on the landing page</li>
+							<li>Select your preferred interface language</li>
+							<li>Choose a theme from the settings menu</li>
+						</ul>
+					</li>
+					<li>
+						Language Selection:
+						<ul>
+							<li>Choose your recognition language from the grid</li>
+							<li>
+								The app will optimize recognition for the selected language
+							</li>
+						</ul>
+					</li>
+					<li>
+						Input Methods:
+						<ul>
+							<li>
+								Direct Recording: Use your microphone for live transcription
+							</li>
+							<li>File Upload: Support for .txt and audio files</li>
+							<li>Text Paste: Direct text input support</li>
+						</ul>
+					</li>
+					<li>
+						Audio Processing:
+						<ul>
+							<li>Use "Play uploaded" to review audio files</li>
+							<li>"Transcribe while playing" for audio file transcription</li>
+							<li>Live recording with visual feedback</li>
+						</ul>
+					</li>
+				</ol>
+
+				<h3>Advanced Features</h3>
+				<ul>
+					<li>
+						<strong>History System:</strong>
+						<ul>
+							<li>Automatic saving of recent transcriptions</li>
+							<li>Access last 10 transcriptions through History menu</li>
+							<li>Quick loading of previous transcripts</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Customization:</strong>
+						<ul>
+							<li>Theme selection for different visual preferences</li>
+							<li>Adjustable interface language</li>
+							<li>Configurable auto-save settings</li>
+						</ul>
+					</li>
+					<li>
+						<strong>Enhanced UI:</strong>
+						<ul>
+							<li>Responsive design for all devices</li>
+							<li>Intuitive navigation with clear icons</li>
+							<li>Visual feedback for all actions</li>
+						</ul>
+					</li>
+				</ul>
+
+				<h3>Privacy & Security</h3>
 				<p>
-					This is a local client-side demo and does not send your audio or text
-					to any server. However, speech recognition engines are implemented by
-					the browser vendor and may send audio to their services depending on
-					implementation. Check your browser's privacy policy if this is a
-					concern.
+					VoiceText Pro operates entirely client-side and doesn't send your data
+					to external servers. However, browser-based speech recognition may use
+					vendor services - check your browser's privacy policy for details.
 				</p>
 
-				<p>Created by Yaroslav Antoniuk "rettargatted".</p>
-				<p><a href="index.html">Back</a></p>
+				<h3>Updates and Support</h3>
+				<p>
+					Regular updates bring new features and improvements. Follow our GitHub
+					repository for the latest changes and support.
+				</p>
+
+				<p>Created by Yaroslav Antoniuk "rettargatted"</p>
+				<div class="action-row">
+					<a href="index.html" class="action-button">
+						<svg
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+						>
+							<path d="M19 12H5M12 19l-7-7 7-7" />
+						</svg>
+						Back to App
+					</a>
+					<a
+						href="https://github.com/yarfolr"
+						target="_blank"
+						class="action-button"
+					>
+						<svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+							<path
+								d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+							/>
+						</svg>
+						GitHub
+					</a>
+				</div>
 			</section>
 		</main>
 	</body>
