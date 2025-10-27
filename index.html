@@ -104,34 +104,32 @@
 				<p class="desc" data-i18n="demo"></p>
 				<p class="desc" data-i18n="bestResults"></p>
 
-				<div id="languageSelect" class="language-select">
-					<h3 data-i18n="langSelect">Select Interface Language</h3>
-					<div class="language-buttons" id="interfaceLanguages"></div>
+				<div class="interface-language-control">
+					<div class="select-row">
+						<label for="interfaceLangSelect" data-i18n="langSelect"
+							>Select Interface Language</label
+						>
+						<select id="interfaceLangSelect" class="lang-select">
+							<!-- Will be populated by JavaScript -->
+						</select>
+						<span id="interfaceLangStatus" class="lang-status"></span>
+					</div>
 				</div>
 
 				<div class="landing-actions">
-					<button id="startBtn" class="primary pulse" data-i18n="letsStart">
+					<button
+						id="startBtn"
+						class="primary pulse"
+						data-i18n="letsStart"
+						disabled
+					>
 						Let's Start
-					</button>
-					<button id="backBtnTop" class="secondary back-btn" data-i18n="back">
-						Back
 					</button>
 				</div>
 			</section>
 
 			<section id="app" class="card hidden">
 				<div class="language-section">
-					<div class="interface-language-control">
-						<div class="select-row">
-							<label for="interfaceLangSelect" data-i18n="interfaceLanguage"
-								>Interface Language:</label
-							>
-							<select id="interfaceLangSelect" class="lang-select">
-								<!-- Will be populated by JavaScript -->
-							</select>
-							<span id="interfaceLangStatus" class="lang-status"></span>
-						</div>
-					</div>
 					<div class="language-control">
 						<h2 data-i18n="recognitionLanguage">Recognition Language</h2>
 						<div id="languages" class="language-grid"></div>
