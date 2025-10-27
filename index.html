@@ -20,6 +20,7 @@
 	<body>
 		<header class="topbar sticky">
 			<nav class="nav-links">
+				<button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
 				<div class="nav-left">
 					<a href="index.html" class="nav-brand">VoiceText Pro</a>
 					<div class="nav-menu">
@@ -91,18 +92,20 @@
 			<section id="landing" class="card center">
 				<h1>VoiceText Pro</h1>
 				<p class="subtitle">by Yaroslav Antoniuk "rettargatted"</p>
-				<p class="desc">
-					Transform your voice into text effortlessly. Features live waveform
-					visualization, multi-language support, and smart device handling.
-				</p>
-				<button id="startBtn" class="primary pulse">Let's Start</button>
+				<p class="desc">Transform your voice into text effortlessly. Features live waveform visualization, multi-language support, and smart device handling.</p>
+				<p class="desc">Welcome! This demo showcases client-side speech recognition using the browser's Web Speech API. Try the live microphone recording, upload audio files to playback and transcribe while playing, or paste text to the editor. For best results use Chrome/Chromium and allow microphone access when prompted.</p>
+				<p class="desc">Привет! Если нужны подсказки — открой раздел Help. На мобильных устройствах используйте кнопку меню и настройки в правом нижнем углу.</p>
+				<div class="landing-actions">
+					<button id="startBtn" class="primary pulse">Let's Start</button>
+					<button id="backBtnTop" class="secondary back-btn">Back</button>
+				</div>
 			</section>
 
 			<section id="app" class="card hidden">
 				<h2>Choose language</h2>
 				<div id="languages" class="languages"></div>
 
-				<!-- device selector (auto-populated) -->
+				<div class="device-row hidden" id="deviceRow">
 				<div class="device-row hidden" id="deviceRow">
 					<label for="deviceSelect">Microphone:</label>
 					<select id="deviceSelect"></select>
@@ -264,6 +267,7 @@
 						<div class="result-actions">
 							<button id="downloadTxt">Download .txt</button>
 							<button id="copyText">Copy</button>
+							<button id="backBtnResult" class="secondary back-btn">Back</button>
 						</div>
 					</div>
 				</div>
@@ -293,9 +297,11 @@
 		<div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
 
 		<!-- Features floating launcher -->
-		<button id="featuresBtn" class="features-btn" title="Open features panel">
-			⚙️
-		</button>
+			<button id="featuresBtn" class="features-btn" title="Open features panel">
+				⚙️
+			</button>
+			<!-- Mobile-only settings button (visible on small screens) -->
+			<button id="mobileSettingsBtn" class="features-btn mobile-only" title="Settings (mobile)">⚙</button>
 		<div id="featuresPanel" class="features-panel hidden" aria-hidden="true">
 			<div class="features-header">
 				<h3>Features</h3>
