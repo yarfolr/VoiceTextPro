@@ -16,11 +16,18 @@
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
+		<script src="translations.js"></script>
 	</head>
 	<body>
 		<header class="topbar sticky">
 			<nav class="nav-links">
-				<button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+				<button
+					id="mobileMenuBtn"
+					class="mobile-menu-btn"
+					aria-label="Toggle menu"
+				>
+					☰
+				</button>
 				<div class="nav-left">
 					<a href="index.html" class="nav-brand">VoiceText Pro</a>
 					<div class="nav-menu">
@@ -92,29 +99,54 @@
 			<section id="landing" class="card center">
 				<h1>VoiceText Pro</h1>
 				<p class="subtitle">by Yaroslav Antoniuk "rettargatted"</p>
-				<p class="desc">Transform your voice into text effortlessly. Features live waveform visualization, multi-language support, and smart device handling.</p>
-				<p class="desc">Welcome! This demo showcases client-side speech recognition using the browser's Web Speech API. Try the live microphone recording, upload audio files to playback and transcribe while playing, or paste text to the editor. For best results use Chrome/Chromium and allow microphone access when prompted.</p>
-				<p class="desc">Привет! Если нужны подсказки — открой раздел Help. На мобильных устройствах используйте кнопку меню и настройки в правом нижнем углу.</p>
+				<p class="desc" data-i18n="welcome"></p>
+				<p class="desc" data-i18n="features"></p>
+				<p class="desc" data-i18n="demo"></p>
+				<p class="desc" data-i18n="bestResults"></p>
+
+				<div id="languageSelect" class="language-select">
+					<h3 data-i18n="langSelect">Select Interface Language</h3>
+					<div class="language-buttons" id="interfaceLanguages"></div>
+				</div>
+
 				<div class="landing-actions">
-					<button id="startBtn" class="primary pulse">Let's Start</button>
-					<button id="backBtnTop" class="secondary back-btn">Back</button>
+					<button id="startBtn" class="primary pulse" data-i18n="letsStart">
+						Let's Start
+					</button>
+					<button id="backBtnTop" class="secondary back-btn" data-i18n="back">
+						Back
+					</button>
 				</div>
 			</section>
 
 			<section id="app" class="card hidden">
-				<h2>Choose language</h2>
-				<div id="languages" class="languages"></div>
+				<div class="language-section">
+					<div class="interface-language-control">
+						<div class="select-row">
+							<label for="interfaceLangSelect" data-i18n="interfaceLanguage"
+								>Interface Language:</label
+							>
+							<select id="interfaceLangSelect" class="lang-select">
+								<!-- Will be populated by JavaScript -->
+							</select>
+							<span id="interfaceLangStatus" class="lang-status"></span>
+						</div>
+					</div>
+					<div class="language-control">
+						<h2 data-i18n="recognitionLanguage">Recognition Language</h2>
+						<div id="languages" class="language-grid"></div>
+					</div>
+				</div>
 
-				<div class="device-row hidden" id="deviceRow">
-				<div class="device-row hidden" id="deviceRow">
-					<label for="deviceSelect">Microphone:</label>
-					<select id="deviceSelect"></select>
+				<div class="device-row" id="deviceRow">
+					<label for="deviceSelect" data-i18n="microphone">Microphone:</label>
+					<select id="deviceSelect" class="device-select"></select>
 					<span id="deviceStatus" class="device-status"></span>
 				</div>
 
 				<div id="actions" class="actions hidden">
-					<div class="action-row">
-						<label class="action-button file-upload">
+					<div class="action-buttons">
+						<label class="action-button" role="button">
 							<svg
 								width="16"
 								height="16"
@@ -126,10 +158,10 @@
 								<polyline points="17 8 12 3 7 8" />
 								<line x1="12" y1="3" x2="12" y2="15" />
 							</svg>
-							Upload Audio
+							<span data-i18n="uploadAudio">Upload Audio</span>
 							<input id="fileInput" type="file" accept="audio/*" hidden />
 						</label>
-						<button id="recordBtn" class="action-button primary-action">
+						<button id="recordBtn" class="action-button primary">
 							<svg
 								width="16"
 								height="16"
@@ -142,7 +174,7 @@
 								<path d="M12 16v4" />
 								<path d="M8 20h8" />
 							</svg>
-							Voice Recognition
+							<span data-i18n="voiceRecognition">Voice Recognition</span>
 						</button>
 					</div>
 
@@ -267,7 +299,9 @@
 						<div class="result-actions">
 							<button id="downloadTxt">Download .txt</button>
 							<button id="copyText">Copy</button>
-							<button id="backBtnResult" class="secondary back-btn">Back</button>
+							<button id="backBtnResult" class="secondary back-btn">
+								Back
+							</button>
 						</div>
 					</div>
 				</div>
@@ -297,11 +331,17 @@
 		<div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
 
 		<!-- Features floating launcher -->
-			<button id="featuresBtn" class="features-btn" title="Open features panel">
-				⚙️
-			</button>
-			<!-- Mobile-only settings button (visible on small screens) -->
-			<button id="mobileSettingsBtn" class="features-btn mobile-only" title="Settings (mobile)">⚙</button>
+		<button id="featuresBtn" class="features-btn" title="Open features panel">
+			⚙️
+		</button>
+		<!-- Mobile-only settings button (visible on small screens) -->
+		<button
+			id="mobileSettingsBtn"
+			class="features-btn mobile-only"
+			title="Settings (mobile)"
+		>
+			⚙
+		</button>
 		<div id="featuresPanel" class="features-panel hidden" aria-hidden="true">
 			<div class="features-header">
 				<h3>Features</h3>
