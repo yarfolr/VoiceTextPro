@@ -39,6 +39,9 @@ let recognitionStarting = false
 // Throttle identical error logs to avoid console spam
 const lastErrorTimestamps = {}
 
+// Debug toggle: set to true to enable original verbose error callbacks (for development)
+const DEBUG_LOGGING = false
+
 // Toast helper
 function showToast(message, opts = {}) {
 	const toast =
@@ -65,7 +68,14 @@ function throttleError(key, fn, minMs = 1200) {
 	if (!lastErrorTimestamps[key] || now - lastErrorTimestamps[key] > minMs) {
 		lastErrorTimestamps[key] = now
 		try {
-			fn()
+			// In production we avoid calling potentially noisy error callbacks
+			// (many browser extensions hook console/error and produce stack traces).
+			if (DEBUG_LOGGING) {
+				fn()
+			} else {
+				// Log a compact debug entry instead of executing the original callback
+				console.debug('[throttleError]', key, new Date().toISOString())
+			}
 		} catch (e) {
 			console.warn('throttleError handler failed', e)
 		}

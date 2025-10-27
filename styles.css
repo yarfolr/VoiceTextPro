@@ -931,3 +931,48 @@ body.light-theme {
 	border-radius: 8px;
 	cursor: pointer
 }
+
+/* Additional mobile polish */
+@media (max-width: 480px) {
+	.features-panel {
+		left: 10px;
+		right: 10px;
+		bottom: 120px;
+		width: auto;
+		max-height: 60vh;
+	}
+
+	.features-btn {
+		right: 12px;
+		bottom: 80px;
+		width: 48px;
+		height: 48px;
+		font-size: 16px;
+	}
+
+	.topbar {
+		padding: 0.5rem;
+	}
+
+	.nav-links {
+		padding: 0 8px;
+	}
+
+	.nav-left {
+		gap: 1rem;
+	}
+
+	.toast {
+		left: 12px;
+		right: 12px;
+		bottom: 12px;
+		max-width: none;
+	}
+
+	footer.links {
+		position: static;
+		display: flex;
+		justify-content: center;
+		padding: 1rem 0;
+	}
+}
