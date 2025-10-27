@@ -687,17 +687,42 @@ h1 {
 	align-items: center;
 	gap: 12px;
 	margin: 12px 0;
-	padding: 12px;
+	padding: 16px;
 	background: rgba(139, 92, 246, 0.05);
 	border-radius: 12px;
 	border: 1px solid rgba(139, 92, 246, 0.1);
 	transition: all 0.2s ease;
+	position: relative;
+	overflow: hidden;
+}
+
+.device-row::before,
+.select-row::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 1px;
+	background: linear-gradient(90deg,
+			transparent,
+			rgba(139, 92, 246, 0.2),
+			transparent);
+	transform: translateX(-100%);
+	transition: transform 0.5s ease;
 }
 
 .device-row:hover,
 .select-row:hover {
 	background: rgba(139, 92, 246, 0.08);
 	border-color: rgba(139, 92, 246, 0.2);
+	transform: translateY(-1px);
+	box-shadow: 0 4px 20px rgba(139, 92, 246, 0.1);
+}
+
+.device-row:hover::before,
+.select-row:hover::before {
+	transform: translateX(0);
 }
 
 .device-row label,
@@ -733,6 +758,8 @@ h1 {
 .lang-select:hover {
 	border-color: var(--accent);
 	background-color: rgba(0, 0, 0, 0.3);
+	transform: translateY(-1px);
+	box-shadow: 0 4px 12px rgba(139, 92, 246, 0.15);
 }
 
 .device-row select:focus,
